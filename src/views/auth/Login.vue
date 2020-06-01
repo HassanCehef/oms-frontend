@@ -61,6 +61,7 @@ export default {
 }
 </script>
 
+<!-- Uncomment this block once we've fixed the webpack config for tests
 <style lang="scss" scoped>
 .is-title {
     text-transform: capitalize;
@@ -70,3 +71,4 @@ export default {
   width: 100%
 }
 </style>
+-->

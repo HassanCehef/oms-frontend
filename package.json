@@ -12,6 +12,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "test": "karma start --single-run",
     "lint": "vue-cli-service lint --no-fix"
   },
   "husky": {
@@ -65,7 +66,9 @@
     "@vue/cli-plugin-vuex": "^4.3.1",
     "@vue/cli-service": "^4.3.1",
     "@vue/eslint-config-airbnb": "^5.0.2",
+    "@vue/test-utils": "^1.0.3",
     "babel-eslint": "^10.1.0",
+    "chai": "^4.2.0",
     "commitlint": "^8.3.5",
     "compression-webpack-plugin": "^3.1.0",
     "conventional-changelog": "^3.1.18",
@@ -73,10 +76,20 @@
     "eslint": "^6.8.0",
     "eslint-plugin-vue": "^6.2.2",
     "husky": "^4.2.5",
+    "karma": "^5.0.9",
+    "karma-chai": "^0.1.0",
+    "karma-chrome-launcher": "^3.1.0",
+    "karma-mocha": "^2.0.1",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-spec-reporter": "0.0.32",
+    "karma-webpack": "^4.0.2",
+    "mocha": "^7.2.0",
     "node-sass": "^4.14.1",
     "sass-loader": "^8.0.2",
     "semantic-release": "^17.0.7",
+    "style-loader": "^1.2.1",
     "vue-loader": "^15.9.2",
+    "vue-style-loader": "^4.1.2",
     "vue-template-compiler": "^2.6.10"
   },
   "optionalDependencies": {
