@@ -1,12 +1,19 @@
 import { expect } from 'chai'
-import { shallowMount } from '@vue/test-utils'
+import { createLocalVue, shallowMount } from '@vue/test-utils'
 import Login from '../../src/views/auth/Login.vue'
 
+const login = shallowMount(Login)
+
 describe('Login.vue', () => {
-  it('increments count when button is clicked', () => {
-    const wrapper = shallowMount(Login)
-    // wrapper.find('button').trigger('click')
-    // expect(wrapper.find('div').text()).contains('1')
+  it('trims the username at login time', () => {
+    login.setData({data: {username: 'this@example.org'}})
+    login.vm.login()
+    expect(login.vm.$data.data.username).to.equal("this@example.org")
+  })
+  it('trims the username at login time', () => {
+    login.setData({data: {username: 'extraspace@example.org   '}})
+    login.vm.login()
+    expect(login.vm.$data.data.username).to.equal("extraspace@example.org")
   })
 })
 

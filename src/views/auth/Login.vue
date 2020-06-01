@@ -41,6 +41,7 @@ export default {
   methods: {
     login () {
       this.error = null
+      // TODO add a trim here
       this.$auth.login(this.data).then(() => {
         if (this.$route.query.to) {
           this.$router.push(decodeURI(this.$route.query.to))
@@ -53,7 +54,7 @@ export default {
         } else {
           // Something happened in setting up the request that triggered an Error
           console.log('Error', err.message)
-          this.error = 'An error occured while logging in.'
+          this.error = 'An error occurred while logging in.'
         }
       })
     }
